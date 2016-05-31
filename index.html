@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice_7</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+            <label for="pointure">Pointure : </label><input type="text" id="pointure" name="pointure"/><br/>
+            <label for="annee">Année de naissance : </label><input type="text" id="annee" name="annee"/><br/>
+            <button onclick="jesaiscompter()" id="valider" name="valider">Valider</button>
+        </form>
+        <script>
+        function test() {
+        var pointure = document.getElementById("pointure").value;
+          if (isNaN (pointure)) {
+            return "Tartine BOOM";
+          } else {
+          pointure = parseFloat(pointure);
+          var annee = document.getElementById("annee").value;
+          var showtime = (((pointure*2)+5)*50-annee+1766);
+          return showtime;
+          }
+        }
+        function jesaiscompter() {
+            alert(test());
+        }
+        </script>
+    </body>
+</html>
